@@ -29,7 +29,10 @@
       <td>パスワード</td>
       <td><input type="text" name="password" value="<?=$password?>"></td>
     </tr>
-    
+    <tr>
+      <td>メールアドレス</td>
+      <td><input type="text" name="mail" value="<?=$mail?>"></td>
+    </tr>
   </table>
   <input type="submit" value="確定">
 </form>
