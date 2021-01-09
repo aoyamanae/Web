@@ -25,7 +25,7 @@ if (empty($sql->fetchAll())) {
       'name'=>$_REQUEST['name'],
       'address'=>$_REQUEST['address'], 
       'login'=>$_REQUEST['login'],
-      'password'=>$pswd //$_REQUEST['password']を変更
+      // 'password'=>$pswd //$_REQUEST['password']を変更
     ];
     echo 'お客様情報を更新しました。';
   } else {

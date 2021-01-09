@@ -9,6 +9,7 @@
     $address=$_SESSION['customer']['address'];
     $login=$_SESSION['customer']['login'];
     $password=$_SESSION['customer']['password'];
+    $mail=$_SESSION['customer']['mail'];  //追加
   } 
 ?> 
 <form class="customer" action="customer-output.php" method="post">
@@ -27,10 +28,11 @@
     </tr>
     <tr>
       <td>パスワード</td>
-      <td><input type="text" name="password" value="<?=$password?>"></td>
+      <td><input type="password" name="password" value="<?=$password?>"></td>
+      <!-- type=passwordにすることで表示が点になる -->
     </tr>
     <tr>
-      <td>メールアドレス</td>
+      <td>メールアドレス</td>   <!--追加-->
       <td><input type="text" name="mail" value="<?=$mail?>"></td>
     </tr>
   </table>
