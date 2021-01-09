@@ -1,0 +1,26 @@
+body {
+  font-family: Meiryo, "ＭＳ Ｐゴシック", "MS P Gothic", sans-serif;
+  margin: 0; padding: 0; font-size: 12px; color: #333;}
+  
+a:link {
+  color: aqua;
+  font-size: 12px;
+}
+a:hover {
+  color:aqua;
+  font-size: 12px;
+}
+a:visited {
+  color: aqua;
+  font-size: 12px;
+}
+
+p {
+  margin: 10px 0 -8px;
+  line-height: 180%;
+  letter-spacing: 1px;
+}
+
+#menu {
+  background-image: company;
+}

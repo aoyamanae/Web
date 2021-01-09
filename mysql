@@ -1,0 +1,37 @@
+ターミナルでログイン
+ ssh ginzo@192.168.17.●●●
+
+mySQLにrootでログイン
+ mysql -u root -p
+
+管理者パスワードの入力
+ Wert3333-		(←みえない)
+
+ログインできればプロンプトがこう変わる
+mysql>
+
+
+ユーザーアカウント作成(mysqlのコマンド)
+ CREATE USER 'aoyama_nae'@'localhost' IDENTIFIED BY 'Asdf3333-';
+
+データベースの一覧を見る(他人のも見える)
+ show databases;
+
+データベースの作成(イニシャルは他人と重複しないように)
+ create database an_shop DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+
+作ったデータベースに対して自分に権限を与える
+ GRANT ALL PRIVILEGES ON an_shop.* TO 'aoyama_nae'@'localhost';
+
+mysqlからrootユーザーをログオフ
+ \q
+
+自分のアカウントでmysqlにログイン
+	mysql -u aoyama_nae -p
+	Asdf3333-		(←みえない)
+
+データベースの一覧を見る(自分のしか見えない)
+ show databases;
+
+mysqlからログオフ
+ \q
