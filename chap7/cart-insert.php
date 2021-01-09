@@ -3,10 +3,6 @@
 <?php session_start(); ?> 
 <?php require 'header3.php'; ?>
 <?php 
-// if (empty($_REQUEST)) {
-//   exit ("直接開かないでください。カートに入れたとき開きます。");
-// }
-
 $id=$_REQUEST['id'];
 if (!isset($_SESSION['product'])) {
   $_SESSION['product']=[];

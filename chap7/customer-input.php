@@ -9,7 +9,6 @@
     $address=$_SESSION['customer']['address'];
     $login=$_SESSION['customer']['login'];
     $password=$_SESSION['customer']['password'];
-    // $mail=$_SESSION['customer']['mail'];
   } 
 ?> 
 <form class="customer" action="customer-output.php" method="post">
@@ -30,10 +29,7 @@
       <td>パスワード</td>
       <td><input type="text" name="password" value="<?=$password?>"></td>
     </tr>
-    <tr>
-      <td>メールアドレス</td>       <!--追加-->
-      <td><input type="text" name="mail" value="<?=$mail?>"></td>   
-    </tr>
+    
   </table>
   <input type="submit" value="確定">
 </form>
