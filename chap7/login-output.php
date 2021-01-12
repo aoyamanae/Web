@@ -16,7 +16,8 @@ foreach ($sql as $row) {
     'name'=>$row['name'],
     'address'=>$row['address'], 
     'login'=>$row['login'],
-    'password'=>$row['password'] //これは必要
+    'password'=>$row['password'], //これは必要
+    'mail'=>$row['mail']
   ];
 }
 // var_dump($_POST['password'],$_SESSION['customer']['password']);
