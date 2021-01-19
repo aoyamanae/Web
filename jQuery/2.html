@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>jQueryのテスト</title>
+<script  src="https://code.jquery.com/jquery-3.5.1.js"></script> 
+<!--最新jQuery,綴じタグないと読み込まれない-->
+</head>
+<body>
+
+
+  ABC <input type="text" name="" id="">
+  abc <input type="number" name="" id="">
+  <input type="radio" name="" id=""> nanika
+
+  <ul>
+    <li class="man">太郎</li>
+    <li class="man">次郎</li>
+    <li class="woman">花子</li>
+  </ul>
+  <ul>
+    <li id="taro"><span>太郎</span></li>
+    <li><span>次郎</span></li>
+    <li><span>花子</span></li>
+  </ul>
+
+  <a href="" target="_blank">ピンクです</a>
+  <a href="" target="_self">青です</a>
+  <a href="" target="_parent">赤です</a>
+  <a href="" target="_top" class="fruit">緑です</a>
+
+<script>
+  $('input[type!="text"]').css("zoom","200%");
+
+  $(".man").css("color", "red");
+  // $("span", "#taro").css("color", "red"); 
+  // $("span, #taro").css("color", "red");
+  $("#taro span").css("color", "red"); 
+
+$("[target='_blank']").css("color", "pink"); //a省略
+$("[target='_self']").css("color", "blue");
+$("a[target=_parent]").css("color", "red");
+$(".fruit[target=_top]").css("color", "green");
+
+</script>
+</body>
+</html>
