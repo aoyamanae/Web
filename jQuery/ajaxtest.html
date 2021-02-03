@@ -1,34 +1,24 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-<meta charset="utf-8">
-<title>jQueryのテスト</title>
-<script  src="https://code.jquery.com/jquery-3.5.1.js"></script> 
-</head>
-
-<body>
 <form>
-  <input type="text" name="id" id="">  <!--追加-->
+  <input type="text" name="id">
   <input type="button" id="sample1" value="サンプル1">
 </form>
 <div id="prd">
+  <!-- ここに埋め込んでみましょう -->
 </div>
 
+<script src="https://code.jquery.com/jquery-3.5.1.js" ></script>
 <script>
-$("#sample1").on("click", function () {
-  var id = $('[name="id"]').val(); 
+  $("#sample1").on("click", function () {
+    var id = $('[name="id"]').val(); 
   $.ajax({
     url: 'ajaxtest.php',
-    type: "POST",            //"GET"
-    dataType: "json",
-    data:{shohin_id: id},     //追加
+    type: "POST",
+    dataType: "html",
+    data:{shohin_id: id},
     success: function (data) {
-    console.log(data);
-    $("#prd").html(data);
+      $('#prd').html(data);
+      console.log(data);
     }
   });
-});
+  });
 </script>
-
-</body>
-</html>
