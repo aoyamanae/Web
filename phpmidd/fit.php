@@ -3,8 +3,13 @@
 class Fit{ //オブジェクトはclassで定義
   private $kyori;
   protected $hoken =35000;
-  public $shaken ='2020/10';
+  public static $shaken ='2020/10'; //スタティック宣言 public $shaken ='2020/10';
   protected $zei =35000;
+  public function _construct($d){ //コンストラクタ関数
+    @session_start();
+    $engin = 'start';
+    echo $d;
+  }
 
   public function soko($km){
     if ($km > 0) 
@@ -17,6 +22,28 @@ class Fit{ //オブジェクトはclassで定義
     echo $this->kyori;
   }
 }
+echo Fit ::$shaken; //クラス内でstaticつけると::で外で呼び出せる
+
+class Lexus extends Fit{
+  protected $zei = 80000;
+
+  function getZei(){
+    echo $this->zei;
+  }
+}
+
+$lexusA  = new Lexus();
+$lexusA->soko(50);
+
+echo "<p>レクサスの走行距離";
+$lexusA->kyori();
+echo "<p>レクサスの重量税";
+$lexusA->getZei();
+
+$date = date("1");
+$lexusA = new Lexus($date); //???????
+
+exit;
 //クラスを使う方法 インスタンス=クラスのコピー 
 
 $fitA = new Fit(); //newでインスタンスをつくる
@@ -49,13 +76,3 @@ echo $fitB->getKyori(); // 走った距離も表示
 // こっちの車検日は?
 echo '<p>fitBの車検日は',$fitB->shaken;
 //インスタンスはお互いに分離してる 
-
-
-class Lexus extends Fit{
-  protected $zei =80000;
-}
-// 50km走らせ税金は?
-$lexisA = new Lexus();
-$lexisA->soko(50);
-var_dump($lexisA);
-// echo $lexis->zei();
