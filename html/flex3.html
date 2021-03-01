@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<style>
+	.box{color: #0f0;} /*468px未満*/
+	/* @media (max-width: 768px){
+			.box{color: #f00;}
+	}
+	@media (max-width: 468px){
+			.box{color: #00f;}
+	} */
+	@media (min-width: 468px){
+			.box{color: #00f;}
+	}
+	@media (min-width: 768px){
+			.box{color: #f00;}
+	}
+	
+	.row div {border: solid 1px #aaa}
+	/* .row {display:flex; justify-content: space-between;}
+	.container {width: 80%; margin:auto;} */
+</style>
+<div class="container box">
+	<div class="row">
+		<div class="col-12">幅100%のBOX</div>
+	</div>
+
+	<div class="row">
+		<div class="col-6">幅50%のBOX</div>
+		<div class="col-6">幅50%のBOX</div>
+	</div>
+
+	<div class="row"> <!--col-4-->
+		<div class="col-4 col-sm-3">幅33.3%のBOX</div>
+		<div class="col-4 col-sm-3">幅33.3%のBOX</div>
+		<div class="col-4 col-sm-3">幅33.3%のBOX</div>
+	</div>
+
+	<div class="row"> <!--col-3-->
+		<div class="col-6 col-sm-4 col-md-3">幅25%のBOX</div>
+		<div class="col-6 col-sm-4 col-md-3">幅25%のBOX</div>
+		<div class="col-6 col-sm-4 col-md-3">幅25%のBOX</div>
+		<div class="col-6 col-sm-4 col-md-3">幅25%のBOX</div>
+	</div>
+
+	<div class="row">
+		<div class="col-2">幅1/6のBOX</div>
+		<div class="col-2">幅1/6のBOX</div>
+		<div class="col-2">幅1/6のBOX</div>
+		<div class="col-2">幅1/6のBOX</div>
+		<div class="col-2">幅1/6のBOX</div>
+		<div class="col-2">幅1/6のBOX</div>
+	</div>
+
+</div>

@@ -1,0 +1,100 @@
+﻿@charset "utf-8";
+
+/* 基本レイアウト ここから↓ */
+body{  /*header, nav, #topicpath, #contents, footer*/
+	width: 852px;
+	margin-left: auto;
+	margin-right: auto;} 
+header h1{
+	margin: 0;
+	padding-top: 47px;
+	text-align: left;}
+nav ul{
+	list-style: none;
+	margin: 0 0 20px 0;
+  padding-left: 0;
+  overflow: hidden;}
+nav ul li{
+	width: 213px;
+	float: left;}
+nav ul li a{
+	display: block;
+	height: 0; /*文字を隠す*/
+	padding-top: 55px;
+	overflow: hidden;}
+nav ul li a:hover{background-position: 0 -55px;}
+#nav_about a{background-image: url(../images/nav1.png);}
+#nav_shop a{background-image: url(../images/nav2.png);}
+#nav_products a{background-image: url(../images/nav3.png);}
+#nav_mag a{background-image: url(../images/nav4.png);}
+#main{
+	width: 580px;
+	float: left;}
+#sub{
+	width: 240px;
+	float: right;}
+footer{padding-top: 30px;}
+#main h1{
+	margin: 0 0 30px 0;
+	padding: 30px 0 30px 0; 
+  border-top: double;
+    border-bottom: dotted 2px #ccc;
+  font-size: 156.25%;
+  text-align: center;}
+/* 基本レイアウト ここまで↑ */
+/* トップページ ここから↓ */
+#news ul{
+	list-style: none;
+	padding-left: 0;
+	margin-top: 0;
+}
+#news ul li{
+	border-bottom: dotted 1px #aaa;
+	padding: 20px 0 20px 160px; /*中身を書きたい部分*/
+	text-indent: -160px; /*文字をpaddingの外に出す一行目のインデント幅を指定ロック内のテキストの行の前に置く空白 (字下げ) の幅*/
+}    
+/* トップページ ここまで↑ */
+
+/* ショップについて ここから↓ */
+.about img {
+	float: right;
+	padding: 0 0 30px 30px;}
+.about {
+	margin-bottom: 30px;
+	overflow: hidden;}
+.about:last-child {
+	margin-bottom: 0;}
+/* ショップについて ここまで↑ */
+
+/* 「店舗案内」ページ ここから↓ */
+table tr:nth-of-type(1) {
+	color: #fff;
+	background-color: #e55;
+}
+tr:nth-of-type(odd) {background-color: #ddd;}
+/* 「店舗案内」ページ ここまで↑ */
+
+/* 「取扱商品」ページ ここから↓ */
+figure {
+	margin: 0;
+	width: 50%;
+	float: left;
+}
+/* .products_box figure{
+	width: 280px;
+	margin: 0	0	15px 20px;
+	float:left;
+}
+.products_box figure:first-child{
+	margin-left: 0;
+} */
+/* 「取扱商品」ページ ここまで↑ */
+
+/* 「メルマガ登録」ページ ここから↓ */
+[type="text"]{
+	width:150px;
+}
+[type="email"]{
+	width:280px;
+}
+/* 「メルマガ登録」ページ ここまで↑ */

@@ -1,3 +1,4 @@
+<!-- xfreeへ -->
 <?php
 /*  hakko.phpからsubmit POSTでDBにINSERTする */
 

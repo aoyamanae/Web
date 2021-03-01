@@ -1,0 +1,22 @@
+<style>
+	.wrap{
+		border: solid 1px ; background: #aaa;
+		/*overflow: hidden;*/ /*floatしたのに親が囲める様になる*/
+		width:100%;
+	}
+	figure {
+		float: left;
+		width: 50%;
+		margin: 0; 
+		border: 1px solid;
+		box-sizing: border-box;
+	} /*figureはブロックだから横並びにするために*/
+	p {clear: both;} /*floatの影響うけない*/
+</style>
+
+<div class="wrap">
+	
+	<figure><img src="img/icon_r1_c1.gif" alt=""></figure>
+	<figure><img src="img/icon_r1_c3.png" alt=""></figure>
+	<p>ここに居る</p>
+</div>

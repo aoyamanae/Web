@@ -1,3 +1,4 @@
+<!-- indexにしてxfreeへ -->
 <?php
 /*受注伝票のデザイン tokuiとshohinで別の取得方法*/
 require_once 'connect.php';
@@ -49,11 +50,11 @@ $shohin_json = json_encode($shohin_arr);
 <table id="shosai">
   <tr><th>商品コード</th><th>商品名</th><th>単価</th>
     <th>数量</th><th>小計</th></tr>
-  <tr><td><input name="shohin_id[]" readonly></td> <!--type="text"は省略できる-->
-      <td><select name="shohin_mei[]" class="shohin_mei"><?=$shohin_select?></select></td>
-      <td><input name="tanka[]" class="tanka"></td>
-      <td><input name="suryo[]" class="suryo"></td>  <!--requiredだと無駄な行があるときに送信できない-->
-      <td><input id="shoke"></td></tr>  
+  <tr><td><input name="shohin_id[]" style="width: 90px;" readonly></td> <!--type="text"は省略できる-->
+      <td><select name="shohin_mei[]" class="shohin_mei" style="width: 150px;"><?=$shohin_select?></select></td>
+      <td><input name="tanka[]" class="tanka" style="width: 90px;"></td>
+      <td><input name="suryo[]" class="suryo" style="width: 50px;"></td>  <!--requiredだと無駄な行があるときに送信できない-->
+      <td><input id="shoke" style="width: 90px;"></td></tr>  
 </table>
 
   <input type="submit" value="発行する">
@@ -133,3 +134,16 @@ function hissu() {
 }
 </script>
 
+<style>
+  table {
+    background-color: lightblue;
+    margin: 10px 0 10px 0;
+  }
+  select {
+    padding: 4px 0px;
+  }
+  input:not(input[type="submit"]) {
+    padding: 4px 0px;
+    width: 184px;
+  }
+</style>

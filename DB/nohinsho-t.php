@@ -1,4 +1,5 @@
-<?php /*先生の模範解答*/
+<!-- xfreeへ -->
+<?php 
 require_once 'connect.php';
 
 if( !empty($_GET['denpyo_id']) ){
@@ -23,26 +24,23 @@ $sth->execute();
 foreach($sth as $key=> $row){
 ?>
   <table>
-  	<tr><td> 受注伝票 </td><td>
-  			<p><b>伝票番号</b>
-		   <span>
-<!-- textテーブルを作成する -->
-	<form>
-	<input type="number" name="denpyo_id" 
-	value="<?=$row['denpyo_id']?>"> <!-- valueに入れると残る -->
-	<input type="submit" name="出す" id="">
-	</form>
-				<!-- <?=$row['denpyo_id']?> -->
-				</span></p> 
+		<tr><td style="width:150px;"> <h1>受注伝票</h1> </td>
+		<td><p><b>伝票番号</b>
+			  <span>
+				<!-- textテーブルを作成する -->
+				<form>
+				<input type="number" name="denpyo_id" value="<?=$row['denpyo_id']?>"><!-- valueに入れると残る --><input type="submit" name="出す" id="">
+				</form>
+				</span>
+  			</p> 
   			<p><b>受注年月日</b><span><?=$row['juchu_bi']?></span></p>
-  	 </td></tr>  	
+  	</td></tr>  	
   	<tr><td> 
 			<p><b>得意先コード</b><span><?=$row['tokui_id']?></span></p>
-  	</td> <td> 
+  		</td> <td> 
 			<p><b>得意先名</b><span><?=$row['tokui_mei']?></span></p>
 			<p><b>得意先住所</b><span><?=$row['jusho']?></span></p>
-  	</td>
-  </tr>
+  	</td></tr>
   </table>
   	
 <?php } 
@@ -58,7 +56,7 @@ $sth = $dbh->prepare( $sql );
 $sth->bindParam(1, $denpyo_id, PDO::PARAM_INT);
 $sth->execute();
 
-$table = '<table border="1">
+$table = '<table border="1" id="hyo">
 <tr><th>商品名</th><th>単価</th><th>数量</th><th>小計</th></tr>';
 $goke = 0;
 foreach($sth as $key=> $row){
@@ -78,5 +76,32 @@ echo $table;
 @media print { 
 	input[type="number"]{border: none;}
 	input[type="submit"]{display: none;}
+}
+
+p {
+  margin: 0;
+}
+table,td,th {
+	border-collapse: collapse;
+}
+td {
+	vertical-align: top;
+	padding : 10px 0px;
+	border-bottom : solid 1px;
+}
+table {
+	margin-bottom: 10px
+}
+#hyo td, th {
+	padding: 3px;
+  width: 90px;
+  height: 25px;
+}
+th {
+  background: #f0e6cc;
+}
+span {
+	padding-left: 10px;
+  /* text-decoration:underline; */
 }
 </style>
