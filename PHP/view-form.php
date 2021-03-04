@@ -21,8 +21,8 @@
         echo "<label><input type='checkbox' name='rental[]' value='$value'>$value</label>" ;
       }
       ?>
-      <b class="pa nick-maisu">
-        <input type="number" name="nick-maisu" min="1" max="99" step="1">
+      <b class="pa nic_maisu">
+        <input type="number" name="nic_maisu" min="1" max="99" step="1">
       </b>
     </div>
 

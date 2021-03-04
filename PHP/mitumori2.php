@@ -38,11 +38,11 @@ class neoExa{
     $this->post = $post; //クラス変数に渡す
     
     echo '<form method="post">
-				<input id="form_regist" type="button" name="button" value="送信">
-			</form>';
+				  <input id="form_regist" type="button" name="button" value="送信">
+			    </form>';
+    echo '<div id="prd"> <!--ここに見積もり結果--> </div>';
+
   } // 確認画面 END
-
-
 
 }
 // END class neoExa
@@ -54,13 +54,13 @@ if( !empty($_POST['btn']) && $_POST['btn']=='確認'){
   $neo->showPost();
   
 }elseif ( !empty($_POST['btn']) && $_POST['btn']=='送信') {
-  // 送信処理を書く
+  // 送信処理を書く 今回はpost送信してないのでなし
 
 }else{
   // 送信画面の始まり
   $neo->viewForm();
   
-}
+} //送信画面の終わり
 
 ?>
 
@@ -68,7 +68,7 @@ if( !empty($_POST['btn']) && $_POST['btn']=='確認'){
 label{display:block}
 .pr{position:relative;}
 .pa{position:absolute;}
-.nick-maisu{top: 25px;left: 142px;}
+.nic_maisu{top: 25px;left: 142px;}
 </style>
 
 <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
@@ -78,15 +78,16 @@ label{display:block}
 	console.log(post);
 
   $("#form_regist").on("click", function () {
-  $.ajax({
-    url: 'ajaxtest.php',
-    type: "POST",
-    dataType: "html",
-    data:{shohin: post},
-    success: function (data) {
-    console.log(data);
-    // $("#prd").html(data);
-    }
+    $.ajax({
+      url: 'ajaxtest.php',
+      type: "POST",
+      dataType: "html",
+      data:{shohin: post},
+      success: function (data) {
+      console.log(data);
+      $("#prd").html(data);
+      }
+    });
   });
-});
+  
 </script>
