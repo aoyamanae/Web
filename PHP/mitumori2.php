@@ -14,7 +14,7 @@ class neoExa{
   public function showPost(){  
     // 確認画面
 		include_once 'inc-array.php';
-
+?><div id="show"><?php
     foreach ($_POST as $key => $value){
 
       if( isset($input_name[$key]) ){ 
@@ -39,7 +39,7 @@ class neoExa{
     
     echo '<form method="post">
 				  <input id="form_regist" type="button" name="button" value="送信">
-			    </form>';
+			    </form></div>';
     echo '<div id="prd"> <!--ここに見積もり結果--> </div>';
 
   } // 確認画面 END
@@ -83,11 +83,12 @@ label{display:block}
       type: "POST",
       dataType: "html",
       data:{shohin: post},
-      success: function (data) {
-      console.log(data);
-      $("#prd").html(data);
+      success: function (res) {
+      console.log(res);
+      $("#prd").html(res);
       }
     });
+    $("#show").hide();
   });
   
 </script>

@@ -19,34 +19,20 @@ if( isset($variable->nenwari) ){
 }
 // プランの金額計算まで
 
-// foreach ($variable as $key => $value) {
-//   if ( is_array($value) ) { //key'rental'のvalueは配列
-// 		//配列ならcheckBox 
-//     foreach ($value as $k => $val) { 
+if ( isset($variable->rental) ) { 
+  // 配列かわからないときはis_arrayを追加する
 
-//       if( $val = '無線LANカード' ){
-//         $total += $rental_price[$val] * $variable->nic_maisu;
-
-//       }else{
-//         $total += $rental_price[$val];
-//       }
-//     }
-//   } 
-// }これだとなぜか100円合わない
-
-if ( isset($variable->rental) ) {
-  //配列ならcheckBox 　配列かわからないときはis_arrayを追加する
   foreach ($variable->rental as $k => $val) { 
 
     if( $val == '無線LANカード' ){
       // $nic_tanka = $rental_price[$val];
-      // echo $variable->nic_maisu;
+      // echo $variable->nic_maisu;　→ 1 枚とか
       // $total += $variable->nic_maisu * $nic_tanka;
-      $total += $rental_price[$val] * $variable->nic_maisu;
+      $total += $variable->nic_maisu * $rental_price[$val];
 
     }else{
       $total += $rental_price[$val];
     }
   }
 } 
-echo $total,'円';
+echo '<h3>見積金額</h3>',$total,'円';
