@@ -1,3 +1,4 @@
+<!-- xfreeへ -->
 <?php
 /*denpyoからAjaxで得意先のデータを返す*/
 require_once 'connect.php';
