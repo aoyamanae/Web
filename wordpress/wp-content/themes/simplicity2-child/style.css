@@ -1,0 +1,283 @@
+@charset "UTF-8";
+
+/*!
+Theme Name: Simplicity2 child
+Template:   simplicity2
+Version:    20161002
+*/
+
+/* Simplicity子テーマ用のスタイルを書く */
+
+/*ナビゲーションメニュー*/
+#navi ul li a b{
+  display: block; /*段落のようなブロック要素にする*/
+  font-size: 1.3em; /*フォントサイズを標準の1.3倍に*/
+}
+#navi ul li a {
+  color: #523300; /* フォントカラーの変更*/
+  text-align: center; /*文字の中央寄せ*/
+  /*border-left: dotted 1px #523300; 左側に点線､幅は1ピクセル､色は文字と同じ*/
+}
+#navi ul > li {
+  width: 16%; /*幅を16%*/
+  float: right; /*浮かせて右から配置する*/
+}
+#navi ul li { border-left: dotted 1px #523300; }
+#navi ul li:first-child { border-right: dotted 1px #523300; }
+#navi { background: #e4e4cc; }
+#navi ul li a:hover {
+  background-color: #de6;
+}
+
+
+/*フロントページmain*/
+.metaslider .caption-wrap { 
+  /*キャプションの背景色を変更 プラグインのセレクタが強いのでimportantをつける*/
+  background: rgba(155, 155, 155, 0.5) !important;
+}
+
+/*新着情報*/
+#the-content div.whatsnew dt { 
+  color: #560 ; /*#9ba82b*/        
+  font-size: .9em;
+  margin-left: 1.3em;
+}
+.whatsnew hr { border-style: none; }
+.article h2, div.whatsnew .wn-head .wn-title{ /*.wn-head .wn-title??*/
+  border-bottom: #9a2 dashed 1px;
+  font-size: 1.3em;
+}
+.article h2{
+  color: #9a2;
+  border-left: none; /*左のボーダーがなし*/
+  margin: 22px 0 0;  /*外余白指定 上22 左右0 下0*/
+  padding: 0;       /*内余白指定 4方とも0*/
+}
+div.whatsnew a:visited, div.whatsnew a {  
+  /*a:visited(訪問済)にも共通のスタイル*/
+  color: #560; /*#888855*/
+  text-decoration: none; /*下線などがない*/
+  font-size: .9em;
+}
+#the-content div.whatsnew a:hover {  
+  /*id入れないと効かない*/
+  /* color: #560; */
+  /*text-decoration: underline; 下線あり*/
+  background-color: #de6; /*追加*/
+}
+/* メニュー */
+.wp-caption-text { /*追加*/
+  color: #560;
+}
+
+/* サイドバー 特定のカテゴリ新着 */
+/* -posts-3かどうかは検証してみないとわからない*/
+#category-posts-2 .cat-post-item { 
+  margin: 0;
+  padding: 0;
+  background-color: #92A21E;
+}  
+.cat-post-item a.cat-post-title{
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.9em;
+  font-weight: bold;
+  margin: 0 3px 0px; /*3px 3px 0px*/
+  display: block;   /*ブロック要素に変更*/
+  /* border: 1px dashed #B2BD87; */
+  padding-left: 7px; /*左の内側余白*/
+}
+#sidebar li {
+  height: 110px; /*130px*/
+}
+span.cat-post-crop {
+  position: relative;
+  top: 9px;
+}
+#category-posts-2-internal .cat-post-thumbnail .cat-post-crop img {
+  margin-top: -12px;
+}
+#category-posts-2-internal .cat-post-thumbnail {
+  margin: 0;
+}
+/*上下の緑の余白を無くす*/
+#category-posts-2-internal .cat-post-item {
+  margin: 0 0 15px; /*8px 0*/
+  /* padding: 0; */
+}
+/*個別記事のサムネイルがたてに伸ばされるので75にする*/
+/* .related-entry-thumb img {
+  height: 75px; 
+} */
+.widget ul{
+  margin-top: 0;
+}
+
+/* div id="the-content" 内の直接の子要素 の最初のpタグ */
+/* div#the-content > p:first-child {    他のページのpもなくなってしまう
+  display: none
+} */
+div#main {
+  padding: 0 29px 20px; /*上は0*/
+  position: static;
+}
+/* .metaslider .theme-light.slider-wrapper {
+  padding: 0px;
+} */
+
+/*Facebook*/
+/* .widget_text {   */
+#text-4 {
+  margin-left: 16px;
+}
+#text-4 h3{ /*追加*/
+  display: none;
+}
+
+/*footer widget*/
+#footer-widget .fa-cutlery:before {
+  /* color: #523300; */
+  margin-right: 6px;
+}
+#footer #footer-widget h3 { /*h4ではない*/
+  color: #523300;
+}
+#footer #footer-widget {
+  color: #523300;
+  font-size:14px;
+}
+#copyright {
+  border-top: 1px dashed #AB9874;
+}
+
+/*header*/
+#site-title { 
+  margin-bottom: 5px;
+  float: left; /*サイトのタイトルを左回り込み*/
+}   
+#header .alignleft, #header .alignright {
+  margin-bottom: 0px; /*下余白をなくす*/
+}   
+#site-description { /*キャッチフレーズを右に回り込み*/
+  position: absolute; /*左上から絶対座標*/
+  bottom: -9px;
+  right: 0;
+}     
+#header .alignleft {
+  margin-left: 0px; /*ヘッダの左余白をなくす*/
+} 
+
+/* ランチ情報 */
+#category-posts-3{
+  background-image:url(images/dog-limited-90r.png), 
+  url(images/curry-india-004.png);
+  background-repeat: no-repeat;
+  background-position: 174px 48px, top left;
+  padding: 21px 13px 0 22px;
+  min-height: 315px;
+  margin-left: 9px;
+}  
+/*はみ出した部分を表示しない hiddenを上書きする*/
+#category-posts-3-internal .cat-post-crop {
+  overflow: unset !important;
+}  
+/* #category-posts-3 .cat-post-item{
+  background-color:rgba(255,255,255,0);
+  背景色はこんな書き方もできます。最後の0は透明度
+  0~1までで 0が完全透明
+} */
+/* weekly lunch */
+#category-posts-3 h3:first-child {
+  color: #fff;
+  font-size: 1.25em;
+  padding-left: 1em;
+  margin-top: 0;
+}
+/* #category-posts-3 h4.widget_title span{ 
+  color: #fff;
+  font-size: 1em; 
+  margin-top: 22px
+} */
+#category-posts-3 li.cat-post-item{ 
+  color: #fff;
+  /* font-size: .75em; */
+  margin-top: 22px; 
+}
+ #category-posts-3-internal p{
+  margin-top: 35px; /*30pxランチタイムの位置*/
+  font-size: .9em;
+  /* float: left; */
+  /* color: #fff; */
+}
+/* #category-posts-3 li.cat-post-item p{
+  margin:0; 記事の余白が大きいので0に
+}  */
+#category-posts-3-internal .cat-post-title {
+  position: relative; /*石焼きカレーの位置*/
+  top: 170px; /*154px*/
+  padding-left: 0px; /*16px*/
+  /* color: #fff; */
+  /*text-decoration: none;  石焼きカレーリンクのボーダーは不要*/
+}
+/* #category-posts-3 li a.post-title{
+  color: #fff;   
+  text-decoration: none;  リンク文字の下線はなし
+} */
+#category-posts-3 .cat-post-item img{
+  margin-left: 3px !important; /*7px*/
+  margin-top:-25px !important; /*-50px画像サイズの位置を上げる*/
+  width: 219px; /*画像サイズの最大値*/
+  margin: 0 auto;   /*センタリングする*/
+  border: #ccc solid;
+  height: auto;  /*横幅に応じて伸縮させる*/
+  float: none;   /*回りこみしない*/
+}
+
+.article h1, #under-entry-body h2, #archive-title {
+  color: #9a2;
+}
+.entry h2 a {
+  font-size: 20px;
+}
+.post-meta {
+  display: none;
+}
+.navigation a {
+  color: #560;
+  text-decoration: none;
+}
+
+/*画面サイズが1110px以下の場合のスタイル*/
+@media screen and (max-width: 1110px){ 
+  /* div#parentslider{ */
+  div.metaslider{
+    display: none;  
+    /* 表示しない */
+  }
+  /* #the-content div.whatsnew{
+    margin-top: 10px; 
+    NEWSの位置を上げる
+  } */
+  div#main{ 
+    margin-top: 0;
+  }
+  #navi ul > li { 
+    /* ulの子要素のみに適用、子孫要素には影響しない */
+    width: 100%; 
+  }
+  #navi ul li { border: none !important; }
+  #navi ul li a b { 
+    /* メニュー内での改行をさせない */
+    display: inline; 
+  }
+  #sidebar .widget { 
+    /* 幅を与えて左回り込みさせる */
+   width: 300px;
+   float: left;
+  }
+} 
+@media screen and (max-width: 500px){ 
+  #h-top #site-description{
+    font-size: 10px;
+  }
+}
