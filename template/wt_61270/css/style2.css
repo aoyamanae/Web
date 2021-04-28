@@ -1,0 +1,14 @@
+/* 追加.変更 */
+/* 
+#1f2746->#7b3b9b  header,header
+#161b31->#5b1b7b  nav
+#c62a82->そのまま accent
+
+*/
+label.text-gray-light.form-label.rd-input-label {
+  color: #ddd;
+}
+#recommend h3{
+  color: #7b3b9b;
+  padding-top: 10px;
+}

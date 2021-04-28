@@ -52,14 +52,14 @@ define( 'DB_COLLATE', '' );
  *
  * @since 2.6.0
  */
-define( 'AUTH_KEY',         'j7DR3r<S3scQtf37!JLKh? ToDyr}B^j>Rik=+h34Nr;0(5r+.}tNpuF4}a_.dyv' );
-define( 'SECURE_AUTH_KEY',  '47D6^hMphUnejY!sUKK>hRy=DfpaHfMC4};z-2|O_ba{HGnX<T9 @tvnv~CiB~%=' );
-define( 'LOGGED_IN_KEY',    'g;Y*0SYZ7oGiuSiK]*8{g+N~1r46nKMsx!X*A*S ]O= oKR&O&ub5fs[Kp(dv>&!' );
-define( 'NONCE_KEY',        '4@)a ^wB]$l1BnCbRnRC]7HI;pK6yDB$A$LXiLFt8YT3WKR2t{`oNtkz_h^ SN}{' );
-define( 'AUTH_SALT',        'YR*J%PB#_N[Ua@m%f//`af71v8%eAtZfx#c1+4?*-U~#a4D-W:t>gr_M8*ggRKxY' );
-define( 'SECURE_AUTH_SALT', '@E(XIsFE!~sD75OIm{^on4_O1o;xjZa&2j4P/4%HlC1J3D,Kly?[]K#WP_lT-4^4' );
-define( 'LOGGED_IN_SALT',   'bc/?N);k[HFL?d70tM Ej|M)>zJ8!gUwo%LH67ljc:+18DIJ@u/htij:%yV7_`$0' );
-define( 'NONCE_SALT',       'OGV2{:;^{~1cL_a^Kj-*+:BbAhx I.eRq%/EmmsG )&!.DEt]DR9pp{IYrn]tWE8' );
+define( 'AUTH_KEY',         '!G!QbLaGj#*Qv4$*i~FIv*gou|~$</4kF>Kr=ck@rkg2.}6$d-.$%!0elyqb#(=Z' );
+define( 'SECURE_AUTH_KEY',  'aRCQ4a)b/H})?DsB(FmG4RTQh$kEBOc=<%0OnWMjyvI{G1cVVl}UfIf{1=4eIs`2' );
+define( 'LOGGED_IN_KEY',    'JXVIK?:ASAFvg`s<X$d}Fb_?S93B$D|B~Y6+Fj/0rKSmye4|m&I@]J)rxZYNB5Eb' );
+define( 'NONCE_KEY',        '<=Tf5o *:j?XxMqn?nfi j` SL.uo$jV^q}(De`8>g@}EYvJLlnwtFO !_I5Sess' );
+define( 'AUTH_SALT',        '<q]O#-=e$E_)dfIk>7wnrPLw{GAt#:~Yi@o(r9=h8#ludP=n84|Qfe-C7k^mK~dF' );
+define( 'SECURE_AUTH_SALT', 'V_7eBm(-si1N$F s.ep-V-4`dq|]fpf1P qY,^|dM)N,]jN*|4sQ{R]-uD7c39v9' );
+define( 'LOGGED_IN_SALT',   'hvb0GRtIv@.~ZCq/d}-F7Og4+)+KcXa;c4RdR~-vFz_c|#LBa]bNL~ds*P82(!lZ' );
+define( 'NONCE_SALT',       '7P6s[ E]|k3<`m,=4j4nO5~rc`0rWPJsLqf[8c#l&:F@:1tdsa3%^qp_sh{]CuLu' );
 
 /**#@-*/
 
@@ -69,7 +69,7 @@ define( 'NONCE_SALT',       'OGV2{:;^{~1cL_a^Kj-*+:BbAhx I.eRq%/EmmsG )&!.DEt]DR
  * それぞれにユニーク (一意) な接頭辞を与えることで一つのデータベースに複数の WordPress を
  * インストールすることができます。半角英数字と下線のみを使用してください。
  */
-$table_prefix = 'wp_';
+$table_prefix = 'sk_';
 
 /**
  * 開発者へ: WordPress デバッグモード
@@ -81,7 +81,7 @@ $table_prefix = 'wp_';
  *
  * @link https://ja.wordpress.org/support/article/debugging-in-wordpress/
  */
-define( 'WP_DEBUG', true );
+define( 'WP_DEBUG', false );
 
 /* 編集が必要なのはここまでです ! WordPress でのパブリッシングをお楽しみください。 */
 

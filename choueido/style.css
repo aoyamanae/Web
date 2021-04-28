@@ -1,0 +1,156 @@
+/* header */
+body{
+	width: 800px;
+	margin: 0 auto;
+}
+#subnav{
+  display: none;
+}
+header h1, nav{
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+nav ul{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+nav ul li{
+  width: 25%;
+	float: left;
+} 
+nav ul li a{
+  color: #222;
+  padding: 12px 0;
+  background-color: #6a6;
+	display: block;
+  border-right: solid #555 2px;
+}
+nav ul li:first-child{
+  border-left: solid #555 2px;
+}
+nav ul li a:hover{
+  background-color: rgba(34, 187, 34, 0.404);
+  color: #222;
+  text-decoration: none;
+} 
+#index nav ul li:nth-of-type(1) a,
+#syohin nav ul li:nth-of-type(2) a,
+#kaisya nav ul li:nth-of-type(3) a{
+  background-color: rgba(34, 187, 34, 0.404);
+}
+nav span, .yokan span, address span{
+  font-size: 0.8em;
+}
+#contents{
+  padding-top: 1rem;
+  text-align: center;
+}
+
+/* index */
+#main_image {
+  float: right;
+  width: auto;
+}
+#index #contents{
+  height: 400px;
+  overflow: hidden;
+}
+#index #contents img{
+  width: 80%;
+}
+.br{
+  display: block;
+}
+
+/* footer */
+footer{
+  background-color: #9d9;
+  color: #555;
+}
+footer a, footer a:hover{
+  color: #800080;
+  text-decoration: none;
+}
+footer #pagetop{
+  float: right;
+}
+footer .left{
+  float: left;
+  width: 60%;
+  height: 300px;
+  overflow: hidden;
+}
+footer .right{
+  width: 40%;
+  float: right;
+}
+footer address {
+  padding: 0 5%;
+}
+
+/* Common */
+#clearboth{
+  clear: both;
+}
+
+/* pankuzu */
+#pan ol{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+#pan ol li{
+  float: left;
+}
+
+/* syohin */
+#syohin .color{
+  color: #b80a40;
+  margin: 2rem 0 1rem;
+}
+.yokan{
+  margin: 2rem auto 0;
+}
+.yokan img{
+  width: 200px;
+}
+.yokan .left{
+  float: left;
+  width: 50%;
+}
+.yokan .right{
+  float: right;
+  width: 50%;
+  padding-top: 10px;
+}
+
+/* kaisya */
+#kaisya section{
+  margin: 2rem auto 0;
+}
+#kaisya table{
+  width: 500px;
+  margin: 0 auto;
+  border: #555 solid 1px;
+}
+#kaisya tr{
+  border: #555 solid 1px;
+}
+#kaisya td{
+  text-align: left;
+  width: 70%;
+}
+#business ul{
+  list-style: none;
+  padding: 0;
+  text-align: left;
+}
+#business{
+  width: 300px;
+  margin: 0 auto;
+}
+.pa_left {
+  padding-left: 1rem;
+} 

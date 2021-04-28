@@ -1,0 +1,16 @@
+@charset "UTF-8";
+/* CSS Document */
+
+body {
+	font-family: 'Trebuchet MS';
+	font-size: 13px;
+	font-weight: bold;
+	color: #ffbb00;
+
+}
+.purple {
+	color: #5143A9 ;
+}
+span {
+	color: #963;
+}

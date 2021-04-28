@@ -1,7 +1,5 @@
 <?php get_header(); ?>
-
-
-  <div class="container">
+<div class="container">
   <div class="contents">
 
     <!-- archivetitle削除 -->
@@ -18,7 +16,7 @@
 
           <!-- ifis_single削除 -->
           <h1><?php the_title(); ?></h1>
-     
+      
 
 
         <div class="postinfo">
@@ -26,10 +24,10 @@
             <i class="far fa-clock"></i>
             <?php echo get_the_date(); ?>
           </time>
-          <span class="postcat">
+          <!-- <span class="postcat">
             <i class="fas fa-folder-open"></i>
-            <?php the_category( ', ' ); ?>
-          </span>
+            <?php //the_category( ', ' ); ?>
+          </span> -->
           <span class="postcom">
             <i class="fas fa-comment"></i>
             <a href="<?php comments_link(); ?>">

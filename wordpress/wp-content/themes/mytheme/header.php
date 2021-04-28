@@ -30,5 +30,25 @@
         <?php wp_nav_menu('theme_location=navigation'); ?>
       </div>
     </nav>
-
   </header>
+
+  <nav class="breadclumb">
+    <?php 
+      if(!is_front_page() && !is_home()){
+        // $path=$_SERVER['REQUEST_URI'];
+        $path=explode('/', $_SERVER['REQUEST_URI']);
+        unset($path[0]);
+        // var_dump($path);
+        $ct=count($path);
+        $href='';
+        for ($i=1; $i <= $ct ; $i++) { 
+          if ($i != $ct) {
+            $href.=$path[$i].'/';
+            echo "<li><a href='/$href'> {$path[$i]} </a> / </li>";
+          } else {
+            echo " <li> {$path[$i]} </li>";
+          }
+        }
+      }
+    ?>
+    </nav>

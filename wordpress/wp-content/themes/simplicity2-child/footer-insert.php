@@ -15,3 +15,12 @@
     jQuery("#category-posts-3 h3").eq(0).html("<i class='fa fa-cutlery'></i> <span>WEEKLY LUNCH</span><br>今週のランチ");// この要素の最初のh3の中身を ()内に書いたタグで上書きするスクリプト
   });
 </script>
+
+<?php if ( wp_is_mobile() ){ ?>
+<style>
+  body > div:last-of-type{
+    z-index: 0 !important;
+    top: -200px !important;
+  }
+</style>
+<?php }?>

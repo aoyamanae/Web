@@ -1,7 +1,6 @@
+<!-- 固定ページ -->
 <?php get_header(); ?>
-
   <div class="container">
-
 
     <?php 
     if (have_posts()) {
@@ -22,5 +21,4 @@
     }
     ?>
   </div> <!-- container -->
-
 <?php get_footer(); ?>

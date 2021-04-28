@@ -2,7 +2,7 @@
 
 <div class="container">
   <div class="contents">
-
+ 
 
     <?php if (is_category()) {?>
     <h1 class="archive-title">
@@ -23,53 +23,47 @@
     if (have_posts()) {
       while (have_posts()) {
         the_post();
-      ?>
+        ?>
 
+        <article <?php post_class(); ?>>
 
-    <article <?php post_class(); ?>>
+          <!-- タイトルへのリンク -->
+          <h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
 
+          <!-- 記事情報 -->
+          <div class="postinfo">
+            <time datetime="<?php echo get_the_date('Y-m-d');?>">
+              <i class="far fa-clock"></i>
+              <?php echo get_the_date(); ?>
+            </time>
+            <span class="postcat">
+              <i class="fas fa-folder-open"></i>
+              <?php the_category( ', ' ); ?>
+            </span>
+            <span class="postcom">
+              <i class="fas fa-comment"></i>
+              <a href="<?php comments_link(); ?>">
+                <?php comments_number( 'コメント', 'コメント(1件)', 'コメント(%件)' ); ?>
+              </a>
+            </span>
+          </div>
 
-      <!-- ifis_single削除 -->
-      <h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
+          <!-- 記事一部分 -->
+          <div class="excerpt">
+            <?php if (has_post_thumbnail()) { ?>
+            <p><?php the_post_thumbnail(); ?></p>
+            <?php } ?>
 
+            <?php the_excerpt(); ?>
+            <p class="more"><a href="<?php the_permalink(); ?>">続きを読む
+                <i class="fa fa-chevron-right"></i>
+              </a></p>
+          </div>
+          <!-- comments_template();?? -->
+          
+        </article>
 
-
-      <div class="postinfo">
-        <time datetime="<?php echo get_the_date('Y-m-d');?>">
-          <i class="far fa-clock"></i>
-          <?php echo get_the_date(); ?>
-        </time>
-        <span class="postcat">
-          <i class="fas fa-folder-open"></i>
-          <?php the_category( ', ' ); ?>
-        </span>
-        <span class="postcom">
-          <i class="fas fa-comment"></i>
-          <a href="<?php comments_link(); ?>">
-            <?php comments_number( 'コメント', 'コメント(1件)', 'コメント(%件)' ); ?>
-          </a>
-        </span>
-      </div>
-
-      <!-- 概要(content移動) -->
-      <div class="excerpt">
-        <?php if (has_post_thumbnail()) { ?>
-          <p><?php the_post_thumbnail(); ?></p>
-        <?php } ?>
-
-        <?php the_excerpt(); ?> 
-        <p class="more"><a href="<?php the_permalink(); ?>">続きを読む
-        <i class="fa fa-chevron-right"></i>
-        </a></p>
-      </div>
-
-      <!-- ifis_singlepagenav削除 -->
-
-
-      <!-- comment削除 -->
-    </article>
-
-    <?php 
+        <?php 
       }
     }
     ?>

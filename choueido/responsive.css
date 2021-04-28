@@ -1,0 +1,94 @@
+@media (max-width: 820px) { 
+  body {
+    width: 100%;
+  }
+}
+@media (max-width: 750px) {
+  nav ul li:last-of-type a{
+    padding: 2.5px 0; /*どうする???*/
+  } 
+  nav span{
+    display:block;
+  }
+  address{
+    font-size: 0.9rem;
+  }
+}
+@media (max-width: 650px) { 
+  #top img{
+    width: 100%;
+  }
+  #subnav{
+    display: inline;
+    position: absolute;
+    top:10px;
+    right: 10px;
+  }
+  #subnav a{
+    color: #222;
+    padding: 5px 15px;
+  }
+  nav {
+    display:none; 
+  }
+  #nav ul li a{
+    border: none;
+  }
+  #nav ul li {
+    border: none;
+    float: none;
+    width: 100%;
+  }
+  #nav {
+  position:absolute;
+  right:1px;
+  top:40px;
+  width: 100%;
+  }
+  nav ul li a:hover{
+    background-color:   #9d9;
+  } 
+  #index nav ul li:nth-of-type(1) a,
+  #syohin nav ul li:nth-of-type(2) a,
+  #kaisya nav ul li:nth-of-type(3) a{
+    background-color: #9d9;
+  }
+
+  footer .information {
+    width: 100%;
+    float: none;
+  }
+  address{
+    font-size: 1rem;
+    margin: 0;
+  }
+  address .br{
+    display: inline;
+    padding-left: 0;
+  }
+  address .br:before {
+    content: "・";
+  }
+  #syohin .left, #syohin .right{
+    float: none;
+    width: 100%;
+    padding-top: 0;
+  }
+  #kaisya table{
+    width: 80%;
+  }
+}
+@media (max-width: 550px) {
+  
+  #index .br2{
+    display: block;
+  }
+  #index #main{
+    margin: 0 5px;
+    line-height: 3;
+  }
+  #index #contents img{
+    display: none;
+  }
+
+}

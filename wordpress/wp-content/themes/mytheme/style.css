@@ -66,7 +66,7 @@ article h1 a {
 /* ヘッダー */
 header {
   margin-bottom: 40px;
-  background-color: #4a5f7e;
+  background-color: #4a5f7e; 
   color: #fff;
 }
 header a {
@@ -133,6 +133,21 @@ nav li a:hover {
 nav li.current-menu-item a {
   border-bottom-color: #e6cc1c;
 } 
+
+/* パンくずナビ */
+nav.breadclumb li {
+  display: inline;
+  margin: 0;
+  padding: 0;
+  width: auto;
+}
+nav.breadclumb li a {
+  display: inline;
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
 
 /* フッター */
 footer {
@@ -394,3 +409,18 @@ article img {
 
 
 html {overflow-y: scroll;}
+header li {
+  list-style-type: none;
+  display: inline;
+}
+.topmenu li {
+  list-style-type: none;
+}
+.topmenu #news {
+  border: solid 1px #aaa;
+  background-color: #aaa;
+  margin-bottom: 50px;
+}
+.topmenu #news h2 {
+  padding-left: 30px;
+}

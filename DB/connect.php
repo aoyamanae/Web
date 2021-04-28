@@ -1,4 +1,3 @@
-<!-- xfreeへ -->
 <?php
 $dsn = 'mysql:dbname=an_renshu_db;host=127.0.0.1;charset=utf8';
 $user = 'aoyama_nae';

@@ -1,3 +1,4 @@
+<!-- コメント投稿フォーム -->
 <div id="comments">
   
   <?php if ( have_comments() ) { ?>

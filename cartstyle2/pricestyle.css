@@ -1,0 +1,28 @@
+@charset "UTF-8";
+/* CSS Document */
+
+#main{
+	background-color:#dcdcdc;
+	color:skyblue;
+	height:250px;
+	padding:20px;
+}
+
+#price{color: #EF9975;}
+
+.limegreen{
+		color: limegreen !important;;
+}
+
+.skyblue{ color: #009cea; }
+
+.white {
+	color: #ffffff;
+	margin:35px;
+	line-height: 25px;
+}
+
+.skyblue span {
+	font-size: 1.5em; 
+	color: #000000;
+}

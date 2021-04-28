@@ -1,0 +1,79 @@
+/* 全体 */
+.witr_demo_area{
+  padding: 20px 0;
+  text-align: center;
+  color: #333;
+}
+/* タイトル部分 */
+.witr_demo_area .container{
+  margin-bottom: 20px;
+}
+/* イメージ部分 */
+.witr_demo_img img{
+  width: 300px;
+  height: 150px;
+}
+.witr_demo_img {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+} 
+/* リンク hover*/
+.witr_img_overlay {
+  position: absolute;
+  z-index: 9;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translateY(-50%) translateX(-50%) scale(0);
+          transform: translateY(-50%) translateX(-50%) scale(0);
+}
+.witr_demo_img:hover .witr_img_overlay {
+  -webkit-transform: translateY(-50%) translateX(-50%) scale(1);
+          transform: translateY(-50%) translateX(-50%) scale(1);
+}
+.witr_img_overlay a {
+  text-align: center;
+  color: #fff;
+  font-size: 1.2rem;
+  padding: 14px 30px;
+  background: #f62541 ;
+  display: inline-block;
+  border-radius: 5px;
+  -webkit-transition: .5s;
+  transition: .5s;
+  text-decoration: none;
+}
+.witr_img_overlay a:hover {
+  background: #f68a25;
+}
+.witr_demo_img:hover::before {
+  top: 0;
+}
+.witr_demo_img::before {
+  position: absolute;
+  content: "";
+  top: 100%;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+  background: rgb(0 0 0 / 25%);
+}
+/* 個々のタイトル部分 */
+.witr_demo_des {
+  margin: 0 0 30px;
+} 
+/* トップに戻る */
+#scrollUp {
+  background: #f62541;
+  bottom: 30px;
+  color: #fff;
+  font-size: 30px;
+  height: 40px;
+  line-height: 40px;
+  right: 60px;
+  text-align: center;
+  width: 40px;
+  border-radius: 5px;
+}

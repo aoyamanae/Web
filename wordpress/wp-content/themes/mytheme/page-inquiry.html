@@ -1,0 +1,64 @@
+
+<h2 class="text-center mb-50">お問い合わせ</h2>
+<p class="text-center lead mb-50">
+下記フォームに必要事項をご入力後に「確認する」ボタンを押してください。<br>
+ご要望やご質問などもお気軽にご記入してください。<br>
+お電話でのお問い合わせも受け付けております。<br>
+TEL : 048-620-1001</p>
+
+<hr class="border">
+<div class="row jcs">
+  <i class="fas fa-dot-circle "></i>
+  <i class="fas fa-dot-circle off"></i>
+  <i class="fas fa-dot-circle off"></i>
+</div>
+
+<div class="form-group">
+  <label>ご予約者様名(必須)</label>
+  [mwform_text name="name"]
+</div>
+
+<div class="form-group">
+  <label>ご連絡先(必須)</label>
+  [mwform_tel name="tel"]
+</div>
+
+<div class="form-group">
+  <label>メールアドレス(必須)</label>
+  [mwform_email name="email"]
+</div>
+
+<div class="form-group">
+  <label>予定日</label>
+  [mwform_datepicker name="date" size="30"]
+</div>
+
+<div class="form-group">
+  <label>予定開始時間</label>
+  [mwform_select name="time" children="10::30 AM,11::30 AM" value="10::30 AM"]
+</div>
+
+<div class="form-group">
+  <label>ご招待予定人数</label>
+  [mwform_number name="people" size="30" min="2" max="4" step="1" placeholder="2"]
+</div>
+
+<div class="form-group">
+  <label>お一人様ご予算</label>
+  [mwform_number name="yosan" size="30" min="10000" max="50000" step="1000" placeholder="10000"]円
+</div>
+
+<div class="form-group">
+  <label>ご要望・ご質問</label>
+  [mwform_textarea name="yobo" cols="50" rows="6"]
+</div>
+
+<div class="form-group">
+  <label > </label>
+  [mwform_bback value="back"]戻る[/mwform_bback]
+</div>
+
+<div class="form-group">
+  <label></label>
+  [mwform_submitButton name="submit" confirm_value="確認画面へ" submit_value="送信する"]
+</div>
