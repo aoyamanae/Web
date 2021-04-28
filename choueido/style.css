@@ -47,6 +47,10 @@ nav span, .yokan span, address span{
   padding-top: 1rem;
   text-align: center;
 }
+#contents h2{
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  color: #373;
+}
 
 /* index */
 #main_image {
@@ -128,15 +132,16 @@ footer address {
 
 /* kaisya */
 #kaisya section{
-  margin: 2rem auto 0;
+  margin: 1rem auto 0;
 }
 #kaisya table{
   width: 500px;
   margin: 0 auto;
-  border: #555 solid 1px;
+  border: #6a6 solid 1px;
+  background-color: #9d9;
 }
 #kaisya tr{
-  border: #555 solid 1px;
+  border: #6a6 solid 1px;
 }
 #kaisya td{
   text-align: left;
